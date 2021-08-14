@@ -75,17 +75,17 @@ function getLast( array ) {
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
-  function find( value, array ){
-    let thisThing = array.indexOf(value);
-    if (thisThing >= 0) {
-      return true;
-    }
-    return false;
-}
 
-console.log(find('spaghetti', Food));
-console.log(find('spaghetti', Nothing));
+function find( value, array ){
+for (const x of array){
+  if ( x === value)
+return true;
+}
+return false;
+}
+let array = ['trees', 'Leaves', 'wood', 'Roots']
+console.log('Here to test the true value of the function array', find('wood', array));
+console.log('Seeing if I can get a false test of the function in a Array', find('moneyball', array));
 // ----------------------
 // Stretch Goals
 // ----------------------
